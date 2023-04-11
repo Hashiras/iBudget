@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_ibudget">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile_account_setting"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/img_button"
+        android:drawableStart="@drawable/ic_person"
+        android:drawableEnd="@drawable/ic_go"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:text="Account Setting"
+        android:textAlignment="viewStart"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_email" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile_change_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/img_button"
+        android:drawableStart="@drawable/ic_edit"
+        android:drawableEnd="@drawable/ic_go"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:text="Change Password"
+        android:textAlignment="viewStart"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/profile_account_setting"
+        app:layout_constraintStart_toStartOf="@+id/profile_account_setting"
+        app:layout_constraintTop_toBottomOf="@+id/profile_account_setting" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile_sign_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/img_button"
+        android:drawableStart="@drawable/ic_logout"
+        android:drawableEnd="@drawable/ic_go"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:text="Sign Out"
+        android:textAlignment="viewStart"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/profile_change_password"
+        app:layout_constraintStart_toStartOf="@+id/profile_change_password"
+        app:layout_constraintTop_toBottomOf="@+id/profile_change_password" />
+
+    <TextView
+        android:id="@+id/profile_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="Full Name"
+        android:textColor="#385723"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Email"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/profile_full_name"
+        app:layout_constraintTop_toBottomOf="@+id/profile_full_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

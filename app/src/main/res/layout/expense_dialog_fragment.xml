@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="411dp"
+        android:layout_height="304dp"
+        android:background="#fff"
+        android:elevation="30dp"
+        app:circularflow_radiusInDP="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/account_amount"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expense_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_money"
+                android:drawablePadding="10dp"
+                android:drawableTint="#8c8c8c"
+                android:hint="Amount"
+                android:textStyle="italic" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/account_description"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/account_amount"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/account_amount"
+            app:layout_constraintTop_toBottomOf="@+id/account_amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/expense_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_description"
+                android:drawablePadding="10dp"
+                android:hint="Description"
+                android:textStyle="italic" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/expense_add"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/img_button"
+            android:text="Add"
+            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="@+id/expense_category"
+            app:layout_constraintTop_toBottomOf="@+id/expense_category" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/expense_cancel"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/img_button"
+            android:text="CANCEL"
+            android:textColor="#fff"
+            app:layout_constraintStart_toStartOf="@+id/expense_category"
+            app:layout_constraintTop_toBottomOf="@+id/expense_category" />
+
+        <Spinner
+            android:id="@+id/expense_category"
+            android:layout_width="331dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintEnd_toEndOf="@+id/account_description"
+            app:layout_constraintStart_toStartOf="@+id/account_description"
+            app:layout_constraintTop_toBottomOf="@+id/account_description" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
